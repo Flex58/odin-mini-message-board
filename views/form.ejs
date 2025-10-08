@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= message %></title>
+  </head>
+  <body>
+    <form method="POST" action="/new">
+      <label for="to">To:</label>
+      <input type="text" name="to" id="to" />
+      <label for="msg">Message:</label>
+      <input type="text" name="msg" id="msg" />
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>

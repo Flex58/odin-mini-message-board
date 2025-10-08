@@ -15,4 +15,9 @@ function getMessages(req, res) {
   res.render("index", { messages: messages, message: "Your Messages" });
 }
 
-module.exports = { getMessages };
+function postMessage(req, res) {
+  messages.push({ text: req.body.msg, user: req.body.to, added: new Date() });
+  res.redirect("/");
+}
+
+module.exports = { getMessages, postMessage };

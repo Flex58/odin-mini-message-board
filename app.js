@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/new", newRouter);
 app.use("/", indexRouter);
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).send(err);
+});
 
 app.listen(PORT, (err) => {
   if (err) {

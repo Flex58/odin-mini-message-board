@@ -6,14 +6,20 @@
     <title><%= message %></title>
   </head>
   <body>
+    <form action="/new" method="get">
+      <button type="submit">Send new Message</button>
+    </form>
     <ul>
       <% messages.forEach(message => { %>
       <li>
-        <p>From: <%= message.user %></p>
+        <p>To: <%= message.user %></p>
         <p>Content: <%= message.text %></p>
         <p><%= message.added %></p>
+        <form action= '/<%= message.id %>' method="get">
+        <button type="submit">Open Message</button>
+        </form>
       </li>
-     <% }) %>
+      <% }) %>
     </ul>
   </body>
 </html>

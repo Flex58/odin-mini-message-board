@@ -1,8 +1,13 @@
 const { Router } = require("express");
-const { getMessages, postMessage } = require("../controllers/indexController");
+const {
+  getMessages,
+  postMessage,
+  getExpandMessage,
+} = require("../controllers/indexController");
 
 const indexRouter = Router();
 
+indexRouter.get("/:messageID", getExpandMessage);
 indexRouter.get("/", getMessages);
 indexRouter.post("/new", postMessage);
 

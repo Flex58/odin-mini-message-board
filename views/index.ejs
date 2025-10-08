@@ -5,5 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= message %></title>
   </head>
-  <body></body>
+  <body>
+    <ul>
+      <% messages.forEach(message => { %>
+      <li>
+        <p>From: <%= message.user %></p>
+        <p>Content: <%= message.text %></p>
+        <p><%= message.added %></p>
+      </li>
+     <% }) %>
+    </ul>
+  </body>
 </html>

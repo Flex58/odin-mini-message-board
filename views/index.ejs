@@ -12,7 +12,7 @@
     <ul>
       <% messages.forEach(message => { %>
       <li>
-        <p>To: <%= message.user %></p>
+        <p>To: <%= message.username %></p>
         <p>Content: <%= message.text %></p>
         <p><%= message.added %></p>
         <form action= '/<%= message.id %>' method="get">

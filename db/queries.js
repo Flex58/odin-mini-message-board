@@ -8,7 +8,7 @@ async function getAllMessages() {
 async function insertMessage(params) {
   await pool.query(
     "INSERT INTO messages (username, text, added) VALUES($1, $2, $3)",
-    [params.username, params.text, params.added]
+    [params.to, params.msg, params.added]
   );
 }
 
